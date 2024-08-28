@@ -45,9 +45,9 @@ def selection(cash):
             else:
                 print("Please enter a valid response.")
     except ValueError:
-        print("\nError processing choice\n")
+        print("\nError processing choice")
     except KeyboardInterrupt:
-        print("\n\nQuitter.\n")
+        print("\n\nQuitter. ")
 
         
 # Cash check function

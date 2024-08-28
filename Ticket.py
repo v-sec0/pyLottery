@@ -18,7 +18,7 @@ class Ticket:
 
         # Asking for amount without over shooting
         clear = False
-        while clear == False:
+        while not clear:
             try:
                 amount = int(input(f"Enter the amount of {self.name} ticket's you would like: "))
                 if ((amount*self.price) > cash):
@@ -108,8 +108,10 @@ class Ticket:
                 true_amount = 0
             
             # Printing the scratch off results
-            print(f'\n Scratching ticket #{ticket_num + 1}\n You won ${true_amount:.2f}\n')
+            print(f'\nScratching ticket #{ticket_num + 1}\n You won ${true_amount:.2f}')
+            print(f'\n----- [ DEBUG ] -----')
             print(f'Debugging: Amount Won ${amount_won:.2f} | Losing Percent {losing_percent:.2f}%')
+            print("-" * 25)
             earnings =+true_amount
 
         # Printing final earnings
